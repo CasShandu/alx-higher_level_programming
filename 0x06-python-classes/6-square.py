@@ -2,8 +2,9 @@
 
 """a class Square that defines a square by: (based on 5-square.py)."""
 
-I
+
 class Square:
+
     """denotes a square."""
 
     def __init__(self, size=0, position=(0, 0)):
