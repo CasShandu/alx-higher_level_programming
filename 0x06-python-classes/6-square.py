@@ -1,13 +1,22 @@
 #!/usr/bin/python3
 
+"""a class Square that defines a square by: (based on 5-square.py)"""
+
+
 class Square:
+    """denotes a square"""
     def __init__(self, size=0, position=(0, 0)):
+        """initialize a square.
+        Args:
+            size (int): the size fo the square.
+            position (int, int): the position of the square."""
 
         self.size = size
         self.position = position
 
     @property
     def size(self):
+        """return the current size of the square."""
         return (self.__size)
 
     @size.setter
@@ -20,6 +29,7 @@ class Square:
 
     @property
     def position(self):
+        """return the current position of the square."""
         return (self.__position)
 
     @position.setter
@@ -32,15 +42,17 @@ class Square:
         self.__position = value
 
     def area(self):
+        """return current area of the square."""
         return (self.__size * self.__size)
 
     def my_print(self):
+        """print character # square."""
         if self.__size == 0:
             print("")
             return
 
         [print("") for i in range(0, self.__position[1])]
         for i in range(0, self.__size):
-            [print(" ", end="") for j in range (0, self.__position[0])]
-            [print("#", end="") for k in range (0, self.__size)]
+            [print(" ", end="") for j in range(0, self.__position[0])]I
+            [print("#", end="") for k in range(0, self.__size)]
             print("")
