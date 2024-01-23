@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 
-"""a class Square that defines a square by: (based on 5-square.py)"""
+"""a class Square that defines a square by: (based on 5-square.py)."""
 
 
 class Square:
-    """denotes a square"""
+    """denotes a square."""
+
     def __init__(self, size=0, position=(0, 0)):
         """initialize a square.
+
         Args:
             size (int): the size fo the square.
             position (int, int): the position of the square."""
