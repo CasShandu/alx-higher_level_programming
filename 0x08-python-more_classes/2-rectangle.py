@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """Definition of a rectangle class."""
 
-
 class Rectangle:
-    """depicts a rectangle class."""
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
@@ -36,7 +34,8 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
-            raise TypeError("height must be an integer")
+             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
