@@ -4,4 +4,4 @@
 -- Records should be listed by descending score
 -- The database name will be passed as an argument to the mysql command
 
-SELECT `score`, `name` FROM `second_table` WHERE BY `name` != " " ORDER BY `score` DESC
+SELECT `score`, `name` FROM `second_table` WHERE `name` != " " ORDER BY `score` DESC;
