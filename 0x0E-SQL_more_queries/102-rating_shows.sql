@@ -3,7 +3,7 @@
 -- Results must be sorted in descending order by the rating
 -- You can use only one SELECT statement
 -- The database name will be passed as an argument of the mysql command
-SELECT title, SUM(tv_show_ratings.rate) `rating`
+SELECT title, SUM(tv_show_ratings.rate) 'rating'
 FROM tv_shows
 LEFT JOIN tv_show_ratings
 ON tv_show_ratings.show_id = tv_shows.id
