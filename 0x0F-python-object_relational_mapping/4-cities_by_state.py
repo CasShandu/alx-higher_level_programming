@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 
-"""This script takes in an argument and displays all values in the `states`
-table of the database `hbtn_0e_0_usa` where the `name` matches the argument."""
+"""This script lists all cities from the database `hbtn_0e_4_usa`"""
 
 if __name__ == "__main__":
     import sys
     import MySQLdb
 
-    username, password, db_name, state_name = sys.argv[1:]
+    username, password, db_name = sys.argv[1:]
 
     conn = MySQLdb.connect(
         host="localhost",
@@ -18,14 +17,13 @@ if __name__ == "__main__":
     )
 
     cursor = conn.cursor()
-
     cursor.execute(
         """
-        SELECT * FROM states
-        WHERE name = %s
-        ORDER BY states.id;
-        """,
-        (state_name,),
+        SELECT cities.id, cities.name, states.name
+        FROM cities
+            JOIN states ON cities.state_id = states.id
+        ORDER BY cities.id;
+        """
     )
 
     result_set = cursor.fetchall()
